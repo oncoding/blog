@@ -1,0 +1,21 @@
+1、性能提升
+	理想情况下能提升16倍的性能，并减少60%的延迟(latency)；大多数情况下较之前的版本能提升3倍的性能。
+2、Pacemaker - Heartbeat Server
+	一个基于内存的处理worker心跳的组件。将心跳加载到内存。
+3、Distributed Cache API
+4、Nimbus HA
+	解决了之前版本的单点故障问题。
+5、State Management - Statefule Bolts with Automatic Checkpointing
+	Storm 1.0 introduces a new Stateful Bolt API with automatic checkpointing. Stateful Bolts are easy to implement -- simply extend the BaseStatefulBolt class -- and can be combined with stateless bolts in a topology. Storm will automatically manage bolt state and recover that state in the event of a failure.
+
+	Storm 1.0 comes with a state implementations backed by memory as well as Redis. Future point releases will include additional support for alternative state stores.
+6、背压机制（Backpressure）
+	based on configurable high/low watermarks expressed as a percentage of a task's buffer size
+7、动态设置log的级别
+8、分布式日志搜索（Distributed Log Search）
+	再也不用每台机器去收集日志了@_@
+9、动态worker分析(Profiling)
+	从storm UI直接分析
+	Heap Dumps
+	JStack Output
+	JProfile Recordings
